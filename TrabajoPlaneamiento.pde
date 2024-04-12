@@ -23,10 +23,12 @@ stroke(0);
 line(posMago.x, posMago.y,posMago.x + 10, posMago.y);
 }
 public void ProductoPunto(){
-/*Calculamos */
+/*Calculo donde dara la cercania entre mago y el tesoro */
 PVector magoTesoro = PVector.sub(posTesoro,posMago);
 println(magoTesoro);
+/*Lo normalizamos para tener un mejor resultado*/
 magoTesoro.normalize();
+/*resultado del Producto punto*/
 float productoPunto = posMago.x * magoTesoro.x + posMago.y * magoTesoro.y;
 if(productoPunto > 0){
 println("Estan apuntando hacia la misma direccion");
